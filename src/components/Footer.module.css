@@ -1,2 +1,13 @@
-.footer {}
-.inner {}
+.footer { background: var(--surface); border-top: 1px solid var(--line); }
+.inner {
+  width: var(--container);
+  margin: auto;
+  padding-block: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .6rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+.inner a { font-weight: 650; }

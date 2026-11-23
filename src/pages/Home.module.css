@@ -1,24 +1,40 @@
+.hero, .teams { width: var(--container); margin-inline: auto; }
 .hero {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 3rem 1rem 2rem;
-}
-
-.title {}
-.lead {}
-.stack {}
-.cta {}
-
-.teams {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 1rem 3rem;
-}
-
-.teamsTitle {}
-
-.grid {
+  margin-block: var(--space);
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space);
+  padding: clamp(1.5rem, 4vw, 3.75rem);
+  border-radius: var(--radius);
+  background: var(--poster);
+  color: #fff9ef;
+}
+.title { font-size: clamp(2.5rem, 5.1vw, 4.5rem); line-height: 1; }
+.title small {
+  display: block;
+  color: #ead4ff;
+  font: 650 .75rem/1.4 var(--mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.lead { max-width: 59ch; color: #ece2f1; margin-block: 1.15rem; }
+.stack { display: flex; flex-wrap: wrap; gap: .45rem; }
+.stack span {
+  font: .75rem/1.4 var(--mono);
+  border: 1px solid #796585;
+  border-radius: 2rem;
+  padding: .27rem .7rem;
+}
+.cta { margin-top: 1rem; color: #ead4ff; font-size: .95rem; }
+.art { width: min(100%, 17rem); justify-self: center; }
+.teams { padding-bottom: clamp(3rem, 7vw, 6rem); }
+.teamsTitle { margin-bottom: 1.35rem; font-size: clamp(1.75rem, 3vw, 2.5rem); }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 56rem) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 39rem) {
+  .grid, .hero { grid-template-columns: minmax(0, 1fr); }
+  .art { display: none; }
+  .hero { margin-bottom: 2rem; }
 }

@@ -1,0 +1,46 @@
+:root {
+  color-scheme: light;
+  --bg: #f8f7f4;
+  --surface: #fffefa;
+  --ink: #272330;
+  --muted: #635e6a;
+  --line: #d9d5dc;
+  --accent: #5d418d;
+  --tint: #eee8f7;
+  --poster: #322244;
+  --badge: #fff2d8;
+  --badge-ink: #724e12;
+  --focus: #166ec0;
+  --radius: 1rem;
+  --space: clamp(1rem, 3.5vw, 3rem);
+  --container: min(calc(100% - var(--space) * 2), 76rem);
+  --sans: "Avenir Next", Avenir, system-ui, sans-serif;
+  --mono: ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #19161e;
+    --surface: #231f29;
+    --ink: #f6f2f8;
+    --muted: #c2bac9;
+    --line: #514a59;
+    --accent: #d1b7ff;
+    --tint: #352b43;
+    --badge: #44361d;
+    --badge-ink: #ffdc98;
+    --focus: #83c6ff;
+  }
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 1rem/1.55 var(--sans);
+  overflow-wrap: anywhere;
+}
+h1, h2, h3, p, dl, dd, ul { margin: 0; }
+h1, h2, h3 { line-height: 1.12; letter-spacing: -.045em; }
+a { color: var(--accent); text-underline-offset: .2em; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }

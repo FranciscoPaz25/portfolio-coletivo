@@ -1,17 +1,30 @@
-.header {}
-.inner {}
-.brand {}
-
-.nav {
-  display: flex;
+.header { background: var(--surface); border-bottom: 1px solid var(--line); }
+.inner, .brand, .nav { display: flex; align-items: center; }
+.inner {
+  width: var(--container);
+  margin-inline: auto;
+  padding-block: 1rem;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  gap: .85rem;
 }
-
-.link {}
-.active {
-  font-weight: 700;
+.brand {
+  gap: .65rem;
+  color: var(--ink);
+  font-weight: 750;
+  letter-spacing: -.035em;
+  text-decoration: none;
 }
+.brand svg { color: var(--accent); }
+.nav { flex-wrap: wrap; gap: .25rem; padding: 0; list-style: none; }
+.link {
+  display: block;
+  padding: .4rem .65rem;
+  border-radius: .5rem;
+  color: var(--muted);
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+.active { background: var(--tint); color: var(--accent); font-weight: 750; }

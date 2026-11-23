@@ -1,14 +1,5 @@
-.card {}
-.name {}
-.role {}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-}
-
-.bio {}
-.links {}
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; }
+.name { font-size: 1.25rem; }
+.role, .bio { margin-top: .65rem; color: var(--muted); }
+.skills, .links { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin-top: 1rem; padding: 0; }
+.skills li { padding: .2rem .65rem; background: var(--tint); border-radius: 1rem; color: var(--accent); font-size: .82rem; font-weight: 600; }

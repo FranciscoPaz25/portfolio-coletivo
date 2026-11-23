@@ -1,16 +1,15 @@
-.frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+.frame, .empty { width: 100%; aspect-ratio: 16 / 9; border-radius: .75rem; overflow: hidden; }
+.frame { position: relative; background: #17141a; }
+.frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.empty {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: .8rem;
+  text-align: center;
+  background: var(--bg);
+  color: var(--muted);
+  border: 2px dashed var(--line);
 }
-
-.frame iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.fallback {}
-.empty {}
+.empty::before { content: ""; width: 1.5rem; height: 1.6rem; background: var(--accent); clip-path: polygon(10% 0, 100% 50%, 10% 100%); }
+.fallback { padding: 1rem; background: var(--tint); border-radius: .75rem; }

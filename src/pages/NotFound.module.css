@@ -1,6 +1,13 @@
-.notFound {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
+.notFound, .loading {
+  width: min(var(--container), 44rem);
+  margin: clamp(2rem, 8vw, 6rem) auto;
+  padding: var(--space);
   text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
 }
+.code { display: block; font: 700 3rem var(--mono); color: var(--accent); margin-bottom: 1rem; }
+.notFound h1 { font-size: clamp(2rem, 4vw, 3rem); }
+.notFound p { margin-top: 1rem; color: var(--muted); }
+.notFound a { display: inline-block; padding: .6rem 1rem; background: var(--tint); border-radius: .5rem; font-weight: 700; }

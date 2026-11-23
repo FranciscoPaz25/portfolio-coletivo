@@ -1,6 +1,8 @@
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import styles from '../pages/NotFound.module.css'
+
 /** Isola erros: se a página de uma equipe quebrar, só ela mostra o aviso. */
 export default class ErrorBoundary extends Component {
   state = { hasError: false }
@@ -16,8 +18,9 @@ export default class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div role="alert" style={{ maxWidth: 960, margin: '0 auto', padding: '2rem 1rem' }}>
-          <p>Esta página encontrou um erro. As outras equipes continuam funcionando.</p>
+        <div role="alert" className={styles.notFound}>
+          <h1>Esta página encontrou um erro</h1>
+          <p>As outras equipes continuam funcionando.</p>
           <p>
             <Link to="/">Voltar para o início</Link>
           </p>
