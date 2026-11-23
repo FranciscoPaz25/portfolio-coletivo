@@ -20,8 +20,11 @@ export default class ErrorBoundary extends Component {
       return (
         <div role="alert" className={styles.notFound}>
           <h1>Esta página encontrou um erro</h1>
-          <p>As outras equipes continuam funcionando.</p>
-          <p>
+          <p>As outras equipes continuam funcionando. Se o site acabou de ser atualizado, recarregar resolve.</p>
+          <p className={styles.actions}>
+            <button type="button" className={styles.button} onClick={() => window.location.reload()}>
+              Recarregar página
+            </button>
             <Link to="/">Voltar para o início</Link>
           </p>
         </div>

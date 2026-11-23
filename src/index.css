@@ -44,3 +44,7 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; }
 h1, h2, h3 { line-height: 1.12; letter-spacing: -.045em; }
 a { color: var(--accent); text-underline-offset: .2em; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+/* Imagens e vídeos das equipes nunca passam da largura da tela */
+img, video, iframe, svg, canvas { max-width: 100%; }
+img, video { height: auto; }

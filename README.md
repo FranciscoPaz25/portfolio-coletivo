@@ -15,10 +15,10 @@ Cada equipe tem **uma pasta só dela** em `src/teams/equipe-XX/`. A Home, o menu
 
 ## Rodando o projeto
 
-Precisa de Node 20+ (recomendado 22).
+Precisa de **Node 20.19+ ou 22.12+** (recomendado 22). Veja com `node -v`. Quem usa nvm pode rodar `nvm use`.
 
 ```bash
-npm install
+npm ci           # instala exatamente as versões do package-lock.json
 npm run dev      # abre em http://localhost:5173
 ```
 
@@ -29,7 +29,7 @@ npm run dev      # abre em http://localhost:5173
 ```bash
 git clone https://github.com/thebylito/portfolio-coletivo.git
 cd portfolio-coletivo
-npm install
+npm ci
 git checkout -b feat/equipe-01   # troque 01 pelo número da sua equipe
 ```
 
@@ -43,7 +43,7 @@ Dentro de `src/teams/equipe-XX/` você encontra:
   - `PROJECT`: tema da página, propósito da entrega e **como a IA foi usada**.
   - `TEAM`: perfil e dinâmica da equipe.
   - `MEMBERS`: um objeto por integrante (nome completo, papel, habilidades, mini-bio, links opcionais).
-- **`Equipe.module.css`**: estilos da sua página. Use CSS Modules (`styles.minhaClasse`) para não afetar as outras equipes.
+- **`Equipe.module.css`**: estilos da sua página, com CSS Modules (`styles.minhaClasse`). **Todo seletor precisa começar com uma classe**: `.page h2 { }` pode, `h2 { }`, `body { }`, `:root { }`, `* { }` e `:global(...)` não podem, porque mudariam o site inteiro. Use só arquivos `.module.css`. O `npm test` (e o CI do PR) acusa seletores proibidos.
 
 Quer mudar o layout? Pode. A página é de vocês. Os componentes `VideoEmbed` e `MemberCard` (em `src/components/`) são opcionais: importe e use, mas **não edite** os arquivos deles.
 
@@ -88,6 +88,7 @@ Depois abra um **Pull Request para a `main`** no GitHub. O GitHub roda o build a
 - **Nunca** faça push direto na `main`. Ela é protegida e só recebe código por Pull Request aprovado pela Equipe Base.
 - Branch sempre no padrão `feat/equipe-XX` (minúsculas, com hífen).
 - Nada de vídeos pesados no repositório.
+- Não instale pacotes (`npm install <pacote>`) e não envie alterações no `package-lock.json`. Use `npm ci`. Antes do commit, confira com `git status` que só arquivos da sua pasta mudaram.
 
 ## Estrutura
 
