@@ -1,0 +1,24 @@
+.hero {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1rem 2rem;
+}
+
+.title {}
+.lead {}
+.stack {}
+.cta {}
+
+.teams {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+.teamsTitle {}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
