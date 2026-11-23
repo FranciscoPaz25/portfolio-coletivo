@@ -1,6 +1,6 @@
 # Portfólio Coletivo da Turma
 
-Desafio Integrador: um portfólio web feito por toda a turma, com React + Vite, versionado no GitHub e publicado no Dokploy.
+Desafio Integrador: um portfólio web feito por toda a turma, com React + Vite, versionado no GitHub, com build no GitHub Actions e publicado no Dokploy.
 
 Cada equipe tem **uma pasta só dela** em `src/teams/equipe-XX/`. A Home, o menu, o rodapé e as rotas já estão prontos e registrados pela Equipe Base. **Você não precisa (e não deve) editar nada fora da sua pasta.**
 
@@ -109,14 +109,21 @@ src/
 
 ## Deploy (Equipe Base)
 
-O site é publicado no **Dokploy** a partir da `main`, usando o `Dockerfile` (build com Node e servidor nginx, que já faz as rotas do React funcionarem ao recarregar a página).
+Quem faz o build é o **GitHub Actions** (`.github/workflows/deploy.yml`). O **Dokploy** só implanta a imagem pronta. A cada merge na `main`:
 
-Configuração da aplicação no Dokploy:
+1. O Actions gera a imagem Docker (build com Node e servidor nginx, que já faz as rotas do React funcionarem ao recarregar a página).
+2. Publica no GHCR: `ghcr.io/thebylito/portfolio-coletivo:sha-<commit>` (e `:latest`).
+3. Chama o Dokploy (`nodilabs/dokploy-deploy-action`) para implantar essa versão.
 
-- **Provider:** GitHub, repositório `thebylito/portfolio-coletivo`, branch `main`
-- **Build Type:** Dockerfile (caminho `./Dockerfile`)
-- **Porta do container:** 80 (em Domains)
-- **Auto Deploy:** ligado, para que cada merge na `main` publique sozinho
+Configuração (uma vez só):
+
+- **No Dokploy:** criar uma aplicação com source **Docker** (imagem `ghcr.io/thebylito/portfolio-coletivo:latest`), porta do container **80** em Domains. Se o pacote do GHCR estiver privado, cadastrar o registry `ghcr.io` com um token de leitura.
+- **No GitHub** (Settings → Secrets and variables → Actions), cadastrar:
+  - `DOKPLOY_SERVER_URL`: URL do painel do Dokploy
+  - `DOKPLOY_API_KEY`: chave de API do Dokploy
+  - `DOKPLOY_APPLICATION_IDS`: ID da aplicação no Dokploy
+
+Enquanto os secrets não existirem, o workflow só publica a imagem e avisa que o deploy foi ignorado. Para reimplantar sem novo commit: aba Actions → "Build & Deploy" → Run workflow.
 
 Teste local da imagem:
 

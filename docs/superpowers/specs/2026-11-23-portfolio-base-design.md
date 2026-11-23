@@ -17,7 +17,7 @@ merges não dão conflito e a `main` sempre builda e está no ar.
 - Menu de navegação (Header) e Rodapé compartilhados.
 - Página própria da Equipe Base com apresentação e ficha técnica dos membros.
 - Espaços já reservados para as 5 equipes de conteúdo.
-- Deploy contínuo no Dokploy a partir da `main` (troca da Vercel já combinada com o professor).
+- Deploy contínuo a partir da `main`: build no GitHub Actions, imagem no GHCR, implantação no Dokploy (troca da Vercel já combinada com o professor).
 
 ## Não-objetivos
 
@@ -120,13 +120,20 @@ arquivo, para a equipe só trocar o conteúdo:
 `VideoEmbed` e `MemberCard` ficam em `src/components/` como opcionais: equipes
 importam, não editam. Estilos de equipe em CSS Modules para não vazar entre páginas.
 
-### Deploy (Dokploy)
+### Deploy (GitHub Actions → GHCR → Dokploy)
+
+Atualizado em 2026-11-23: o build é feito no GitHub Actions, não no Dokploy
+(mesmo padrão dos outros projetos da conta, ex.: `superfii-admin`).
 
 - `Dockerfile` multi-stage: `node:22-alpine` roda `npm ci && npm run build` →
   `nginx:alpine` serve `dist/` com `try_files $uri /index.html` (SPA fallback).
-- `.dockerignore` (node_modules, dist, .git).
-- No painel: aplicação apontando para o repositório, branch `main`, build type
-  Dockerfile, porta 80, auto-deploy ligado. Feito manualmente pela Base.
+- `.github/workflows/deploy.yml`, em push na `main` (e manual): `docker buildx`
+  com cache do GHA → push para `ghcr.io/thebylito/portfolio-coletivo:sha-<7>` e
+  `:latest` → `nodilabs/dokploy-deploy-action@v0.1.0` com os secrets
+  `DOKPLOY_API_KEY`, `DOKPLOY_SERVER_URL`, `DOKPLOY_APPLICATION_IDS`. Sem os
+  secrets, o deploy é ignorado com aviso (a `main` não fica vermelha).
+- No Dokploy: aplicação com source Docker (imagem do GHCR), porta 80.
+  Configurado manualmente pela Base.
 
 ### GitHub
 
@@ -153,4 +160,4 @@ Passo a passo para as equipes: clonar, `git checkout -b feat/equipe-XX`, editar 
 
 - Dados dos membros da Equipe Base (nome, papel, habilidades, bio/links).
 - Usernames do GitHub dos colegas para os convites.
-- Configuração da aplicação no painel do Dokploy.
+- Configuração da aplicação no painel do Dokploy e dos secrets do deploy no GitHub.
