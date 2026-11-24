@@ -13,7 +13,7 @@ export default function Home() {
           Cada página tem o vídeo da equipe e a referência por trás dele, a explicação do projeto e a ficha de cada
           integrante.
         </p>
-        <p className={styles.stack}><span>React + Vite</span><span>GitHub</span><span>Dokploy</span></p>
+        <p className={styles.stack}><span>React + Vite</span><span>GitHub</span></p>
           <p className={styles.cta}>Usar IA era permitido, desde que a equipe soubesse explicar o código. Na próxima aula, cada equipe apresenta a própria página neste site, em 5 a 7 minutos.</p>
         </div>
         <svg className={styles.art} viewBox="0 0 240 240" aria-hidden="true">
