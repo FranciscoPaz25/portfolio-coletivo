@@ -270,10 +270,18 @@
   line-height: 1.3;
 }
 
+.page .teamList h3 a,
+.page .teamList h3 a:hover {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .teamList p {
   margin: 0.1rem 0 0;
   color: var(--muted);
   font-size: 0.92rem;
+  text-align: justify;
 }
 
 .credits {
