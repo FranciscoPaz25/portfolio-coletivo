@@ -52,7 +52,7 @@ const STACK = [
   },
   {
     label: 'Execução',
-    text: 'Docker Compose com os serviços mysql, api e web. A API publica a porta 5080 e o site publica a porta 80. O MySQL fica na rede interna.',
+    text: 'Docker Compose com os serviços mysql, api e web.',
   },
 ]
 
