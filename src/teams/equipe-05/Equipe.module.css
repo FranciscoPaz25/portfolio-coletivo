@@ -189,6 +189,14 @@
   color: #2a2e3a;
 }
 
+.purpose p {
+  margin: 0;
+}
+
+.purpose p + p {
+  margin-top: 0.7rem;
+}
+
 .linkBand {
   margin-top: 2.75rem;
   background: var(--white);
@@ -222,7 +230,8 @@
   color: var(--white);
   font-weight: 600;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .appLink:hover,

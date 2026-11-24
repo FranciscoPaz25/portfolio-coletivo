@@ -12,7 +12,7 @@ import manuelaPhoto from './photos/manuela.jpg'
 // Equipe 05 — edite SOMENTE os arquivos desta pasta (src/teams/equipe-05).
 // =====================================================================
 
-const APP_URL = 'http://localhost'
+const APP_URL = 'https://unicolab.thebylito.dev/'
 
 /** 1. Vídeo com referência */
 const VIDEO = {
@@ -25,16 +25,13 @@ const VIDEO = {
 const PROJECT = {
   theme:
     'Plataforma colaborativa de estudos para o ENADE, feita para os concluintes da UNIFOR.',
-  purpose:
-    'Apresentar o UniColab: a separação entre site, API e banco, o endereço em que a aplicação está publicada e quem construiu cada parte.',
-  aiUsage:
-    'A IA apoiou a revisão dos textos, a organização das seções desta página e o rascunho de trechos de interface e documentação. A arquitetura, o modelo de dados, a autenticação e o conteúdo das questões foram definidos e revisados pela equipe.',
-}
-
-/** 3. Apresentação da equipe (o nome da equipe fica em info.js) */
-const TEAM = {
-  profile:
-    'Grupo 5 de Desenvolvimento Web. A equipe reparte a concepção e os requisitos, a arquitetura da API e do banco, e as telas de filtros, simulados, dashboard e fórum.',
+  purpose: [
+    'O UniColab é uma plataforma colaborativa que ajuda estudantes a se prepararem para o ENADE.',
+    'Ele reúne simulados cronometrados e um banco de questões para praticar os conteúdos da prova.',
+    'Um painel de progresso mostra o desempenho, os acertos e a evolução em cada área.',
+    'O fórum permite tirar dúvidas e estudar em conjunto com outros alunos.',
+    'A área do professor completam o apoio ao estudo.',
+  ],
 }
 
 const STACK = [
@@ -207,11 +204,11 @@ export default function Equipe05() {
             </div>
             <div className={styles.stackRow}>
               <dt>Propósito</dt>
-              <dd>{PROJECT.purpose}</dd>
-            </div>
-            <div className={styles.stackRow}>
-              <dt>Uso de IA</dt>
-              <dd>{PROJECT.aiUsage}</dd>
+              <dd className={styles.purpose}>
+                {PROJECT.purpose.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </dd>
             </div>
           </dl>
         </div>
@@ -232,7 +229,6 @@ export default function Equipe05() {
       <section className={`${styles.panel} ${styles.team}`} aria-labelledby="equipe">
         <div className={styles.wrap}>
           <h2 id="equipe">Equipe</h2>
-          <p>{TEAM.profile}</p>
           <ul className={styles.teamList}>
             {MEMBERS.map((member) => (
               <li key={member.name}>
