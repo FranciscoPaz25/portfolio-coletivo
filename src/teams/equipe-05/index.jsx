@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import VideoEmbed from '../../components/VideoEmbed.jsx'
-import info from './info.js'
 import styles from './Equipe.module.css'
 import matheusPhoto from './photos/matheus.jpg'
 import carlosPhoto from './photos/carlos.jpg'
@@ -141,7 +140,6 @@ function useInterFont() {
 
 export default function Equipe05() {
   useInterFont()
-  const title = info.name?.trim() || 'Equipe 05'
 
   return (
     <article className={styles.page}>
@@ -158,9 +156,8 @@ export default function Equipe05() {
         </div>
       </header>
 
-      <section className={styles.hero} id="inicio" aria-labelledby="titulo">
+      <section className={styles.hero} id="inicio" aria-label="Apresentação">
         <div className={styles.wrap}>
-          <h1 id="titulo">{title}</h1>
           <figure className={styles.videoBlock}>
             <div className={styles.videoFrame}>
               <VideoEmbed url={VIDEO.url} title="Apresentação do UniColab" />
