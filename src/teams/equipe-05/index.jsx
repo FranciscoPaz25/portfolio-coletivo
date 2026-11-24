@@ -161,10 +161,6 @@ export default function Equipe05() {
       <section className={styles.hero} id="inicio" aria-labelledby="titulo">
         <div className={styles.wrap}>
           <h1 id="titulo">{title}</h1>
-          <p className={styles.lede}>
-            Plataforma colaborativa de estudos para o ENADE. Simulados cronometrados e banco de questões com
-            justificativa em cada alternativa, para os concluintes da UNIFOR.
-          </p>
           <figure className={styles.videoBlock}>
             <div className={styles.videoFrame}>
               <VideoEmbed url={VIDEO.url} title="Apresentação do UniColab" />

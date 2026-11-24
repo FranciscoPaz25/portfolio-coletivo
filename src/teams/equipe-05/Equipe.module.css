@@ -118,13 +118,6 @@
   line-height: 1.05;
 }
 
-.lede {
-  max-width: var(--text);
-  margin: 0.85rem 0 0;
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
 .videoBlock {
   margin: 1.6rem 0 0;
 }
