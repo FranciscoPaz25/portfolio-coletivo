@@ -7,13 +7,13 @@ export default function Home() {
     <>
       <section className={styles.hero}>
         <div className={styles.intro}>
-          <h1 className={styles.title}><small>Desafio Integrador</small>Cinco equipes,<br />um site só</h1>
+          <h1 className={styles.title}><small>Desafio Integrador</small>Portfólio Coletivo<br />da Turma</h1>
         <p className={styles.lead}>
           A gente fez este portfólio em uma aula. Cada equipe cuidou de uma página. Lá a gente mostra o vídeo,
           conta de onde veio a ideia e como usou IA no projeto.
         </p>
         <p className={styles.stack}><span>React + Vite</span><span>Uma branch por equipe</span><span>Deploy a cada merge</span></p>
-          <p className={styles.cta}>Por qual equipe você quer começar? Na próxima aula, cada uma apresenta sua página ao vivo.</p>
+          <p className={styles.cta}>Escolha uma equipe para ver a página. Na próxima aula, cada uma apresenta a sua ao vivo.</p>
         </div>
         <svg className={styles.art} viewBox="0 0 240 240" aria-hidden="true">
           <path fill="#ad9aef" d="M0 120V58a58 58 0 0 1 116 0v62z" />
