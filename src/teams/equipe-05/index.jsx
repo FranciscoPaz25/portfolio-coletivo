@@ -52,7 +52,7 @@ const STACK = [
   },
   {
     label: 'Execução',
-    text: 'Docker Compose com os serviços mysql, api e web. A API publica a porta 5080 e o site publica a porta 80. O MySQL fica na rede interna.',
+    text: 'Docker Compose com os serviços mysql, api e web.',
   },
 ]
 
@@ -60,6 +60,7 @@ const STACK = [
 const MEMBERS = [
   {
     name: 'José Matheus Lima Moura Barroso',
+    github: 'https://github.com/jmatheusunifor2025',
     role: 'Banco de dados, nuvem e AWS',
     skills: ['MySQL', 'Docker Compose', 'AWS'],
     bio: 'Modelou o MySQL 8.4 InnoDB (scripts sql/001_schema.sql e sql/002_rotinas.sql, utf8mb4) e subiu a stack em Docker Compose e AWS, com os serviços mysql, api e web.',
@@ -68,6 +69,7 @@ const MEMBERS = [
   },
   {
     name: 'Carlos Levi Costa',
+    github: 'https://github.com/carloslevi00-lang',
     role: 'Requisitos',
     skills: ['IEEE 830', 'Casos de uso', 'Personas', 'Backlog DEEP'],
     bio: 'Elaborou o IEEE 830 (requisitos funcionais e não funcionais, MoSCoW), os casos de uso, as personas e o backlog DEEP do UniColab.',
@@ -76,6 +78,7 @@ const MEMBERS = [
   },
   {
     name: 'Lucas dos Santos Bandeira',
+    github: 'https://github.com/LucasBandeiraa',
     role: 'Back-end e API',
     skills: ['C#', 'ASP.NET Core', 'JWT', 'Swagger'],
     bio: 'Desenvolveu a API em C# e ASP.NET Core 8 (Controller/Service/Repository, Entity Framework Core), com JWT, BCrypt e endpoints de autenticação, questões e simulados documentados no Swagger/OpenAPI.',
@@ -84,6 +87,7 @@ const MEMBERS = [
   },
   {
     name: 'Larah Queiroz Silva',
+    github: 'https://github.com/Zumano-Estiloso',
     role: 'Front-end',
     skills: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
     bio: 'Implementou a interface em React 19, TypeScript e Vite, com Tailwind CSS 4, nas telas de filtros, resolução de questões, simulado, dashboard e fórum, consumindo a API.',
@@ -92,6 +96,7 @@ const MEMBERS = [
   },
   {
     name: 'Maria Emanuelle Pimentel de Oliveira',
+    github: 'https://github.com/manuol14',
     role: 'UX design e front-end',
     skills: ['UX', 'Personas', 'Fluxos', 'React'],
     bio: 'Definiu personas, fluxos e as telas (login, painéis, banco de questões, simulado e fórum) e implementou essa interface junto com o React.',
@@ -227,7 +232,11 @@ export default function Equipe05() {
                   style={{ objectPosition: member.photoPosition }}
                 />
                 <div>
-                  <h3>{member.name}</h3>
+                  <h3>
+                    <a href={member.github} target="_blank" rel="noopener noreferrer">
+                      {member.name}
+                    </a>
+                  </h3>
                   <p>
                     {member.role}. {member.bio}
                   </p>
