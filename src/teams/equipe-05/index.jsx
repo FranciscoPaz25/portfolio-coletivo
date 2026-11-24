@@ -37,7 +37,7 @@ const PROJECT = {
 const STACK = [
   {
     label: 'Site',
-    text: 'React 19 e TypeScript, montados com Vite 6. A interface usa Tailwind CSS 4, a fonte Inter, o fundo #f4f6fb e a cor de marca #6d4aff. O cliente HTTP nasce do OpenAPI.',
+    text: 'React 19 e TypeScript, montados com Vite 6. A interface usa Tailwind CSS 4. O cliente HTTP nasce do OpenAPI.',
   },
   {
     label: 'API',
