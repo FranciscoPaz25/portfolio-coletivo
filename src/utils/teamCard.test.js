@@ -7,7 +7,7 @@ test('vazio → em construção', () =>
     number: '03',
     name: 'Equipe 03',
     theme: 'Tema a definir',
-    summary: 'Página em construção.',
+    summary: 'A equipe ainda não publicou a página.',
     inProgress: true,
   }))
 test('preenchido', () =>

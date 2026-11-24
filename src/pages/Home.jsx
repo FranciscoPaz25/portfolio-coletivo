@@ -9,11 +9,12 @@ export default function Home() {
         <div className={styles.intro}>
           <h1 className={styles.title}><small>Desafio Integrador</small>Portfólio Coletivo<br />da Turma</h1>
         <p className={styles.lead}>
-          Portfólio feito pela turma em uma aula. Cada equipe tem a sua página, com um vídeo, a ideia por trás do
-          projeto, como a IA ajudou e quem participou.
+          Cinco equipes montaram este site na mesma aula, cada uma na sua branch, e a gente juntou tudo no final.
+          Cada página tem o vídeo da equipe e a referência por trás dele, a explicação do projeto e a ficha de cada
+          integrante.
         </p>
         <p className={styles.stack}><span>React + Vite</span><span>GitHub</span><span>Dokploy</span></p>
-          <p className={styles.cta}>Escolha uma equipe para ver a página. Na próxima aula, cada uma apresenta a sua ao vivo.</p>
+          <p className={styles.cta}>Usar IA era permitido, desde que a equipe soubesse explicar o código. Na próxima aula, cada equipe apresenta a própria página neste site, em 5 a 7 minutos.</p>
         </div>
         <svg className={styles.art} viewBox="0 0 240 240" aria-hidden="true">
           <path fill="#ad9aef" d="M0 120V58a58 58 0 0 1 116 0v62z" />
@@ -31,7 +32,7 @@ export default function Home() {
 
       <section className={styles.teams} aria-labelledby="equipes">
         <h2 id="equipes" className={styles.teamsTitle}>
-          Equipes
+          As cinco equipes
         </h2>
         <div className={styles.grid}>
           {teams.map((team) => (
