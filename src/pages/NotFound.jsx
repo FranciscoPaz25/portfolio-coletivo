@@ -5,10 +5,10 @@ export default function NotFound() {
   return (
     <section className={styles.notFound}>
       <span className={styles.code}>404</span>
-      <h1>Página não encontrada</h1>
-      <p>O endereço acessado não existe neste portfólio.</p>
+      <h1>Cadê a página?</h1>
+      <p>Esse endereço não leva a nenhuma página da turma.</p>
       <p>
-        <Link to="/">Voltar para o início</Link>
+        <Link to="/">Voltar para as equipes</Link>
       </p>
     </section>
   )

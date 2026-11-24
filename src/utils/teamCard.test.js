@@ -6,8 +6,8 @@ test('vazio → em construção', () =>
   assert.deepEqual(getCardInfo('equipe-03', { name: '', theme: '', summary: '' }), {
     number: '03',
     name: 'Equipe 03',
-    theme: 'Tema a definir',
-    summary: 'Página em construção.',
+    theme: 'O tema vem aqui',
+    summary: 'Aqui a gente vai contar um pouco do projeto.',
     inProgress: true,
   }))
 test('preenchido', () =>
