@@ -244,6 +244,9 @@ export default function Equipe05() {
                 />
                 <div>
                   <h3>{member.name}</h3>
+                  <p>
+                    {member.role}. {member.bio}
+                  </p>
                   <a
                     className={styles.githubLink}
                     href={member.github}
@@ -253,9 +256,6 @@ export default function Equipe05() {
                     <GithubIcon />
                     {member.github.replace('https://', '')}
                   </a>
-                  <p>
-                    {member.role}. {member.bio}
-                  </p>
                 </div>
               </li>
             ))}
