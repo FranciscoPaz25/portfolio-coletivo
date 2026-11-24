@@ -24,11 +24,11 @@ export default function VideoEmbed({ url, title = 'Vídeo' }) {
     return (
       <p className={styles.fallback}>
         <a href={url.trim()} target="_blank" rel="noopener noreferrer">
-          Abrir o vídeo em outra aba
+          Assistir ao vídeo
         </a>
       </p>
     )
   }
 
-  return <p className={styles.empty}>Nosso vídeo vai aparecer aqui.</p>
+  return <p className={styles.empty}>Vídeo ainda não adicionado.</p>
 }

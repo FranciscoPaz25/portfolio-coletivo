@@ -9,10 +9,10 @@ export default function Home() {
         <div className={styles.intro}>
           <h1 className={styles.title}><small>Desafio Integrador</small>Portfólio Coletivo<br />da Turma</h1>
         <p className={styles.lead}>
-          A gente fez este portfólio em uma aula. Cada equipe cuidou de uma página. Lá a gente mostra o vídeo,
-          conta de onde veio a ideia e como usou IA no projeto.
+          Portfólio feito pela turma em uma aula. Cada equipe tem a sua página, com um vídeo, a ideia por trás do
+          projeto, como a IA ajudou e quem participou.
         </p>
-        <p className={styles.stack}><span>React + Vite</span><span>Uma branch por equipe</span><span>Deploy a cada merge</span></p>
+        <p className={styles.stack}><span>React + Vite</span><span>GitHub</span><span>Dokploy</span></p>
           <p className={styles.cta}>Escolha uma equipe para ver a página. Na próxima aula, cada uma apresenta a sua ao vivo.</p>
         </div>
         <svg className={styles.art} viewBox="0 0 240 240" aria-hidden="true">
@@ -31,7 +31,7 @@ export default function Home() {
 
       <section className={styles.teams} aria-labelledby="equipes">
         <h2 id="equipes" className={styles.teamsTitle}>
-          Nossas equipes
+          Equipes
         </h2>
         <div className={styles.grid}>
           {teams.map((team) => (

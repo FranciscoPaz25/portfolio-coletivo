@@ -10,7 +10,7 @@ export default function Footer() {
         </p>
         <p>
           <a href={siteConfig.repoUrl} target="_blank" rel="noopener noreferrer">
-            Nosso código no GitHub
+            Código no GitHub
           </a>
         </p>
       </div>

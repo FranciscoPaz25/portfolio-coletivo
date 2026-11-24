@@ -6,7 +6,7 @@ export default function TeamRoute({ team }) {
   const { Component } = team
   return (
     <ErrorBoundary key={team.id}>
-      <Suspense fallback={<p className={styles.loading}>Abrindo a página da equipe…</p>}>
+      <Suspense fallback={<p className={styles.loading}>Carregando…</p>}>
         <Component />
       </Suspense>
     </ErrorBoundary>
