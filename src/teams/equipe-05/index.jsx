@@ -157,8 +157,7 @@ export default function Equipe05() {
               <VideoEmbed url={VIDEO.url} title="Apresentação do UniColab" />
             </div>
             <figcaption className={styles.videoNote}>
-              <strong>Referência:</strong> {VIDEO.reference}{' '}
-              <a href={VIDEO.url}>https://youtu.be/OAmEJaLQxsc</a>
+              Vídeo de apresentação da plataforma. <a href={VIDEO.url}>{VIDEO.url}</a>
             </figcaption>
           </figure>
         </div>
@@ -229,13 +228,9 @@ export default function Equipe05() {
                 />
                 <div>
                   <h3>{member.name}</h3>
-                  <p className={styles.role}>{member.role}</p>
-                  <p>{member.bio}</p>
-                  <ul className={styles.skills} aria-label={`Habilidades de ${member.name}`}>
-                    {member.skills.map((skill) => (
-                      <li key={skill}>{skill}</li>
-                    ))}
-                  </ul>
+                  <p>
+                    {member.role}. {member.bio}
+                  </p>
                 </div>
               </li>
             ))}
