@@ -63,7 +63,7 @@ const MEMBERS = [
     github: 'https://github.com/jmatheusunifor2025',
     role: 'Banco de dados, nuvem e AWS',
     skills: ['MySQL', 'Docker Compose', 'AWS'],
-    bio: 'Modelou o MySQL 8.4 InnoDB (scripts sql/001_schema.sql e sql/002_rotinas.sql, utf8mb4) e subiu a stack em Docker Compose e AWS, com os serviços mysql, api e web.',
+    bio: 'Modelou o MySQL 8.4 InnoDB e subiu a stack em Docker Compose e AWS, com os serviços mysql, api e web.',
     photo: matheusPhoto,
     photoPosition: 'center 16%',
   },
