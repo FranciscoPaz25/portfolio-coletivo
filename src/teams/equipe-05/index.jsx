@@ -214,7 +214,6 @@ export default function Equipe05() {
         <div className={styles.wrap}>
           <div>
             <h2 id="site">Site da aplicação</h2>
-            <p>Endereço em que o serviço web do UniColab está publicado.</p>
           </div>
           <a className={styles.appLink} href={APP_URL}>
             {APP_URL}
