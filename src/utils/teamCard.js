@@ -12,8 +12,8 @@ export function getCardInfo(id, info) {
   return {
     number,
     name: name || `Equipe ${number}`,
-    theme: text(info?.theme) || 'O tema vem aqui',
-    summary: text(info?.summary) || 'Aqui a gente vai contar um pouco do projeto.',
+    theme: text(info?.theme) || 'Tema a definir',
+    summary: text(info?.summary) || 'A equipe ainda não publicou a página.',
     inProgress: !name,
   }
 }
